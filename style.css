@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Inter', sans-serif;
+}
+
+/* Palette colors */
+:root {
+    /* Light Mode */
+    --blue-dark: #00699e;
+    --blue-light: #007ebd;
+    --black: #000000;
+    --light-very-gray: #dadee2;
+    --gray: #d9d9d9;
+    --white: #ffffff;
+
+    /* Dark Mode */
+    --blue-marine: #4cc7f0;
+    --black-opacity: #142129;
+    --grey-opacity: #4e5d6b;
+    --black-less: #0c0c0c;
+
+    /* Shadows */
+    --lightgrey: #d4d4d4;
+    --shadow-header: 0 2px 10px 2px var(--lightgrey);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-header);
+    padding: 0 1rem;
+}
+
+header .brand {
+    width: calc(100% - 75%);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav ul .flag,
+.flag figcaption {
+    display: flex;
+    gap: .5rem;
+}
+
+main {
+    margin-top: 5%;
+}
+
+article#about-me {
+    display: flex;
+    align-items: center;
+}
+
+article#about-me button {
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    font-weight: 500;
+}
+
+article#about-me section {
+    display: grid;
+    gap: 1rem;
+}
+
+article#about-me section button:first-child {
+    background: var(--blue-dark);
+    color: var(--white);
+}
+
+article#about-me button:hover {
+    cursor: pointer;
+}
+
+article#services {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+}
+
+article#services section {
+    display: flex;
+    justify-content: space-around;
+}
