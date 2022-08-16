@@ -148,10 +148,58 @@
                 </div>
             </div>
         </article>
+
+        <article id="contacts">
+            <h2>Entre em contato comigo</h2>
+            <h4>Ainda está com alguma dúvida? Responda o formulário abaixo para falar comigo.</h4>
+
+            <form method="post">
+                <fieldset>
+                    <label for="">Nome</label>
+                    <input type="text" name="" id="" placeholder="Digite seu nome" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="">Email</label>
+                    <input type="email" name="" id="" placeholder="Ex: email@gmail.com" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="">Telefone</label>
+                    <input type="tel" name="" id="phone" placeholder="Ex: (49) 99817 - 9010" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="">Assunto</label>
+                    <input type="text" name="" id="" placeholder="Digite o tipo de serviço que você deseja">
+                </fieldset>
+
+                <fieldset>
+                    <label for="">Mensagem</label>
+                    <textarea name="" id="" placeholder="Digite sua mensagem aqui" required></textarea>
+                </fieldset>
+
+                <button type="submit">
+                    <p>Enviar</p>
+                    <span>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </span>
+                </button>
+            </form>
+        </article>
     </main>
 
     <script src="https://kit.fontawesome.com/51dc1929bd.js" crossorigin="anonymous"></script>
     <script type="module" src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('#phone').mask('(00) 00000-0000');
+    </script>
 </body>
 
 </html>
