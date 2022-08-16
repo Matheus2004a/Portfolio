@@ -335,6 +335,41 @@ article#contacts button:hover {
     transform: translateY(0);
 }
 
+footer {
+    display: grid;
+    background: var(--black);
+    padding: 3rem 1rem 1.25rem;
+    gap: 5rem;
+}
+
+footer article {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer :is(article, section a, p) {
+    color: var(--white);
+}
+
+footer section h3 {
+    margin-bottom: 1rem;
+}
+
+footer section figure {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+footer .section-social-medias span {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+footer .copyright {
+    text-align: center;
+}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 
