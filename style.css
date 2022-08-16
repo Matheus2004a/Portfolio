@@ -31,15 +31,21 @@ html {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--white);
     box-shadow: var(--shadow-header);
-    padding: 0 1rem;
+    padding: 1rem 4rem;
+    z-index: 10;
 }
 
 header .brand {
-    width: calc(100% - 75%);
+    width: calc(100% - 50%);
 }
 
 ul {
