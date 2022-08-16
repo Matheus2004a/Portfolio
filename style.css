@@ -67,6 +67,8 @@ nav ul .flag,
 }
 
 main {
+    display: grid;
+    gap: 3.75rem;
     margin-top: 5%;
 }
 
@@ -94,7 +96,7 @@ article#about-me section button:first-child {
     color: var(--white);
 }
 
-article#about-me button:hover {
+article#about-me button:hover, article#abilities figure:hover {
     cursor: pointer;
 }
 
@@ -122,11 +124,31 @@ article#services .card {
     padding: 1rem;
 }
 
-article#services .card span {
+article#services .card span, article#abilities span {
     font-size: 3rem;
 }
 
 article#services .card h3 {
     margin-bottom: 10px;
     color: var(--blue-light);
+}
+
+article#abilities {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    gap: 1.5rem;
+}
+
+article#abilities section {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+article#abilities figure {
+    display: grid;
+    place-items: center;
 }
