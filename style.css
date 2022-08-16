@@ -101,7 +101,8 @@ article#about-me section button:first-child {
 
 article#about-me button:hover,
 article#abilities figure:hover,
-article#contacts button:hover {
+article#contacts button:hover,
+.btn-top-page:hover {
     cursor: pointer;
 }
 
@@ -316,6 +317,22 @@ article#contacts button {
 
 article#contacts button:hover {
     opacity: .9;
+}
+
+.btn-top-page {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    clip-path: circle();
+    padding: 10px;
+    color: var(--white);
+    background: var(--blue-dark);
+    transform: translateY(100px);
+    transition: all .5s;
+}
+
+.btn-top-page.show {
+    transform: translateY(0);
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */

@@ -12,3 +12,10 @@ techs.map(item => {
     </figure>`
 })
 articleAbilities.append(section)
+
+const buttonTopPage = document.querySelector(".btn-top-page")
+window.addEventListener("scroll", showButton)
+
+function showButton() {
+    scrollY > 600 ? buttonTopPage.classList.add("show") : buttonTopPage.classList.remove("show")
+}
