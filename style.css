@@ -40,7 +40,7 @@ header {
     align-items: center;
     background: var(--white);
     box-shadow: var(--shadow-header);
-    padding: 1rem 4rem;
+    padding: .5rem 4rem;
     z-index: 10;
 }
 
@@ -75,10 +75,35 @@ nav ul .flag,
     gap: .5rem;
 }
 
+nav ul li a {
+    position: relative;
+    color: var(--black);
+    transition: color .5s;
+}
+
+nav ul li a:hover {
+    color: var(--blue-dark);
+}
+
+nav ul li a::after {
+    width: 0;
+    content: "";
+    position: absolute;
+    bottom: -1.6rem;
+    left: 0;
+    transition: width .5s;
+    background: var(--blue-dark);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    height: 2px;
+}
+
 main {
     display: grid;
     gap: 3.75rem;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 article#about-me {
@@ -86,6 +111,8 @@ article#about-me {
     grid-template-columns: 30% 60%;
     justify-content: center;
     align-items: center;
+    background: rgba(217, 221, 225, 0.25);
+    padding: 2rem 0;
 }
 
 article#about-me button {
