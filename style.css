@@ -349,6 +349,11 @@ article#contacts button {
     transition: opacity .5s;
 }
 
+article#contacts button:disabled {
+    opacity: .8;
+    cursor: not-allowed;
+}
+
 article#contacts button:hover {
     opacity: .9;
 }

@@ -19,3 +19,10 @@ window.addEventListener("scroll", showButton)
 function showButton() {
     scrollY > 600 ? buttonTopPage.classList.add("show") : buttonTopPage.classList.remove("show")
 }
+
+const form = document.querySelector("form")
+const buttonForm = form.querySelector("button[type='submit']")
+
+form.onsubmit = () => {
+    buttonForm.disabled = true
+}
