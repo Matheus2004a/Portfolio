@@ -22,7 +22,7 @@ function showButton() {
 
 const selectLanguage = document.querySelector("select")
 
-selectLanguage.onchange = (e) => {
+selectLanguage.onchange = () => {
     const options = selectLanguage.options[selectLanguage.selectedIndex].value
     const flag = document.querySelector(".flag img")
     
@@ -36,3 +36,25 @@ const buttonForm = form.querySelector("button[type='submit']")
 form.onsubmit = () => {
     buttonForm.disabled = true
 }
+
+const swiper = new Swiper('.swiper', {
+    keyboard: true,
+    breakpoints: {
+        767: {
+            slidesPerView: 2,
+            setWrapperSize: true // Wrapper cobre todo o conteúdo do slide
+        },
+        700: {
+            slidesPerView: 1,
+            setWrapperSize: true
+        }
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+    navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next'
+    }
+})
