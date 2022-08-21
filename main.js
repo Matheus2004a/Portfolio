@@ -22,7 +22,6 @@ async function getRepos() {
 
 window.onload = async () => {
     const [dataUser, dataRepos] = await Promise.all([getUser(), getRepos()])
-    console.log(dataRepos)
 
     photo.src = dataUser.avatar_url
     bio.innerHTML = `${dataUser.bio} | ${dataUser.location}`
@@ -46,16 +45,6 @@ window.addEventListener("scroll", showButton)
 
 function showButton() {
     scrollY > 600 ? buttonTopPage.classList.add("show") : buttonTopPage.classList.remove("show")
-}
-
-const selectLanguage = document.querySelector("select")
-
-selectLanguage.onchange = () => {
-    const options = selectLanguage.options[selectLanguage.selectedIndex].value
-    const flag = document.querySelector(".flag img")
-
-    const isBr = options === "pt"
-    isBr ? flag.src = "./assets/svg/flag-br.svg" : flag.src = "./assets/svg/flag-us.svg"
 }
 
 const form = document.querySelector("form")

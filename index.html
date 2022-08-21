@@ -32,19 +32,9 @@
                 <li><a href="#projects">Projetos</a></li>
                 <li><a href="#contacts">Contatos</a></li>
 
-                <li>
-                    <figure class="flag">
-                        <img src="./assets/./svg/flag-br.svg" alt="icon-flag">
-                        <figcaption>
-                            <select name="">
-                                <option value="pt" selected>Português</option>
-                                <option value="en">Inglês</option>
-                            </select>
-                        </figcaption>
-                    </figure>
-                </li>
+                <div id="google_translate_element"></div>
 
-                <li>
+                <li class="switch-theme">
                     <span>
                         <i class="fa-regular fa-moon"></i>
                     </span>
@@ -63,15 +53,16 @@
                 <h2>Sobre mim</h2>
                 <h4></h4>
                 <p>Meu nome é Matheus Aurélio, tenho 17 anos, sou Desenvolvedor Front-End e Técnico em Desenvolvimento
-                    de
-                    Sistemas, tendo como objetivo atuar no desenvolvimento de interfaces com foco em experiência para o
-                    usuário.
+                    de Sistemas, tendo como objetivo atuar no desenvolvimento de interfaces com foco em experiência para
+                    o usuário.
+                    <br>
                     Atualmente estou estudando JavaScript e suas stacks, pois meu objetivo é me especializar nesta
                     linguagem para aplicar em uma oportunidade de trabalho para evoluir meus conhecimentos e fazer
                     contribuições a equipes.
+                    <br>
                     Tem interesse em tirar alguma ideia sua do papel? Então entre em contato comigo, estarei totalmente
-                    disposto a lhe ajudar.</p>
-
+                    disposto a lhe ajudar.
+                </p>
                 <div class="container-btns">
                     <a href="./pdf/Matheus Aurélio - Currículo.pdf" download="Matheus Aurélio - Currículo.pdf"
                         type="application/pdf" target="_blank">
@@ -160,7 +151,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        
+
                         <div class="swiper-slide cards">
                             <figure>
                                 <img src="https://raw.githubusercontent.com/Matheus2004a/ecommerce_products/master/design/desktop-preview.jpg"
@@ -186,7 +177,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        
+
                         <div class="swiper-slide cards">
                             <figure>
                                 <img src="https://raw.githubusercontent.com/Matheus2004a/ecommerce_products/master/design/desktop-preview.jpg"
@@ -345,6 +336,8 @@
 
     <script src="https://kit.fontawesome.com/51dc1929bd.js" crossorigin="anonymous"></script>
     <script type="module" src="main.js"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -353,8 +346,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        }
+
         $('#phone').mask('(00) 00000-0000');
     </script>
+
 </body>
 
 </html>

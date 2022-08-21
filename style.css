@@ -68,6 +68,7 @@ a {
 nav ul {
     display: flex;
     gap: 2.5rem;
+    height: 1rem;
 }
 
 nav ul .flag,
@@ -117,7 +118,34 @@ article#about-me {
 }
 
 article#about-me .photo {
-    clip-path: circle();
+    border-radius: 50%;
+}
+
+#google_translate_element select {
+    position: relative;
+    bottom: 10px;
+    border: 1px solid var(--light-very-gray);
+    border-radius: 3px;
+    padding: 6px 8px;
+}
+
+.goog-logo-link,
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
 }
 
 article#about-me button {
