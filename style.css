@@ -136,7 +136,7 @@ article#about-me section button:first-child {
 article#about-me button:hover,
 article#abilities figure:hover,
 article#contacts button:hover,
-article#projects .swiper-slide:hover,
+article#projects .cards:hover,
 article#projects .slides button:hover,
 .btn-top-page:hover {
     cursor: pointer;
@@ -203,48 +203,63 @@ article#projects {
     gap: 1.5rem;
 }
 
-article#projects .swiper-slide {
+article#projects .swiper {
+    width: 1115px;
+}
+
+article#projects :is(.swiper, .cards) {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+article#projects .cards {
+    width: 550px !important;
+    margin-right: 1rem;
+    background: var(--white);
+    border-radius: 5px;
+}
+
+article#projects .cards figure {
     transition: background .5s;
 }
 
 article#projects .slides button {
+    background: transparent;
+}
+
+article#projects .slides figure button {
     width: fit-content;
     display: flex;
     align-items: center;
     gap: .5rem;
-    background: transparent;
     color: var(--blue-light);
     font-weight: 700;
     font-size: 1rem;
+    margin-left: auto;
 }
 
-article#projects .swiper-wrapper {
-    gap: 1rem;
-}
-
-article#projects .swiper-slide img {
+article#projects .cards img {
     width: 100%;
     border-radius: 5px;
 }
 
-article#projects .swiper-slide figcaption {
+article#projects .cards figcaption {
     display: grid;
     gap: 1rem;
-    margin-top: 1rem;
+    padding: 1rem;
 }
 
-article#projects .swiper-slide figcaption img {
+article#projects .swiper-pagination-bullet-active {
+    background: var(--blue-light);
+}
+
+article#projects .cards figcaption img {
     width: 10%;
 }
 
-article#projects .swiper-slide .container-img {
+article#projects .cards .container-img {
     display: flex;
     align-items: center;
     gap: .5rem;
-}
-
-.swiper {
-    width: 1100px;
 }
 
 article.education {
