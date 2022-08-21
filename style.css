@@ -116,6 +116,10 @@ article#about-me {
     padding: 2rem 0;
 }
 
+article#about-me .photo {
+    clip-path: circle();
+}
+
 article#about-me button {
     border-radius: 5px;
     padding: .5rem 1rem;

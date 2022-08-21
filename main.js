@@ -1,4 +1,32 @@
 import { techs } from "./techs.js";
+import { user, repositories } from "./services/api.js"
+
+const sectionAboutMe = document.querySelector("#about-me")
+const photo = sectionAboutMe.querySelector(".photo")
+const bio = sectionAboutMe.querySelector("section h4")
+
+async function getData(url) {
+    const data = await fetch(url).then(status => status.json()).then(response => response).catch(error => error)
+    return data
+}
+
+async function getUser() {
+    const response = await getData(user)
+    return response
+}
+
+async function getRepos() {
+    const response = await getData(repositories)
+    return response
+}
+
+window.onload = async () => {
+    const [dataUser, dataRepos] = await Promise.all([getUser(), getRepos()])
+    console.log(dataRepos)
+
+    photo.src = dataUser.avatar_url
+    bio.innerHTML = `${dataUser.bio} | ${dataUser.location}`
+}
 
 const articleAbilities = document.querySelector("#abilities")
 const section = document.querySelector("#abilities section")
@@ -25,7 +53,7 @@ const selectLanguage = document.querySelector("select")
 selectLanguage.onchange = () => {
     const options = selectLanguage.options[selectLanguage.selectedIndex].value
     const flag = document.querySelector(".flag img")
-    
+
     const isBr = options === "pt"
     isBr ? flag.src = "./assets/svg/flag-br.svg" : flag.src = "./assets/svg/flag-us.svg"
 }
