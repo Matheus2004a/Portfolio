@@ -1,0 +1,57 @@
+:root {
+    --blue-marine: #4cc7f0;
+    --black-opacity: #142129;
+    --grey-opacity: #4e5d6b50;
+    --black-less: #0c0c0c;
+}
+
+html[data-theme="dark"] {
+    background: var(--black-less);
+}
+
+html[data-theme="dark"] header {
+    background: var(--black-opacity);
+    color: var(--white);
+}
+
+html[data-theme="dark"] ul li a:hover,
+html[data-theme="dark"] article#services .card h3 {
+    color: var(--blue-marine);
+}
+
+html[data-theme="dark"] ul li a,
+html[data-theme="dark"] article#contacts :is(h4, label) {
+    color: var(--white);
+}
+
+html[data-theme="dark"] :is(article h2, article#about-me, article#services .card, article#abilities figure, article#projects .cards, article.education .content) {
+    color: var(--white);
+}
+
+html[data-theme="dark"] nav ul li a::after {
+    background: var(--blue-marine);
+}
+
+html[data-theme="dark"] article#services .card,
+html[data-theme="dark"] article.education .content {
+    box-shadow: none;
+    background: var(--grey-opacity);
+}
+
+html[data-theme="dark"] :is(.left, .right)::before {
+    border-color: transparent transparent transparent var(--grey-opacity);
+}
+
+html[data-theme="dark"] article#contacts :is(form input, textarea) {
+    background: var(--grey-opacity);
+    border: none;
+    color: var(--white);
+}
+
+html[data-theme="dark"] article#contacts :is(form input, textarea):focus {
+    caret-color: var(--blue-marine);
+}
+
+html[data-theme="dark"] :is(article#about-me, article#projects .cards, footer) {
+    background: var(--grey-opacity);
+}

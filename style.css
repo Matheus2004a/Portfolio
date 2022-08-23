@@ -15,12 +15,6 @@
     --gray: #d9d9d9;
     --white: #ffffff;
 
-    /* Dark Mode */
-    --blue-marine: #4cc7f0;
-    --black-opacity: #142129;
-    --grey-opacity: #4e5d6b;
-    --black-less: #0c0c0c;
-
     /* Shadows */
     --shadow-header: 0 4px 10px rgb(0 0 0 / 8%);
     --shadow-cards: 0 2px 10px 2px #d4d4d4;
@@ -28,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    transition: all .5s;
 }
 
 header {
@@ -165,6 +160,7 @@ article#about-me section button:first-child {
     color: var(--white);
 }
 
+header .switch-theme:hover,
 article#about-me button:hover,
 article#abilities figure:hover,
 article#contacts button:hover,
@@ -271,7 +267,7 @@ article#projects .slides figure button {
 
 article#projects .cards img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
 }
 
 article#projects .cards figcaption {
