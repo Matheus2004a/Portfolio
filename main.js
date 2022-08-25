@@ -4,6 +4,7 @@ import { user, repositories } from "./services/api.js"
 const sectionAboutMe = document.querySelector("#about-me")
 const photo = sectionAboutMe.querySelector(".photo")
 const bio = sectionAboutMe.querySelector("section h4")
+const linkedin = document.querySelector(".section-social-medias a")
 
 async function getData(url) {
     const data = await fetch(url).then(status => status.json()).then(response => response).catch(error => error)
@@ -21,10 +22,11 @@ async function getRepos() {
 }
 
 window.onload = async () => {
-    const [dataUser, dataRepos] = await Promise.all([getUser(), getRepos()])
+    const [user, repos] = await Promise.all([getUser(), getRepos()])
 
-    photo.src = dataUser.avatar_url
-    bio.innerHTML = `${dataUser.bio} | ${dataUser.location}`
+    photo.src = user.avatar_url
+    bio.innerHTML = `${user.bio} | ${user.location}`
+    linkedin.href = user.blog
 }
 
 const articleAbilities = document.querySelector("#abilities")

@@ -18,8 +18,8 @@ function saveTheme(theme, icon) {
 function checkTheme(icon) {
     let theme = html.className
     const isLightTheme = theme === "" || theme === "light"
-    
-    isLightTheme ? (html.classList.add("dark"), html.classList.remove("light")) : (html.classList.remove("dark"), html.classList.add("light"))
+
+    isLightTheme ? (html.classList.remove("light"), html.classList.add("dark")) : (html.classList.remove("dark"), html.classList.add("light"))
     theme = html.className
 
     saveTheme(theme, icon)
