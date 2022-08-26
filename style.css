@@ -103,6 +103,10 @@ main {
     padding-top: 10%;
 }
 
+main article h2:not(article#about-me h2) {
+    text-align: center;
+}
+
 article#about-me {
     display: grid;
     grid-template-columns: 30% 60%;
@@ -155,9 +159,14 @@ article#about-me section {
     gap: 1rem;
 }
 
-article#about-me section button:first-child {
+article#about-me button {
     background: var(--blue-dark);
     color: var(--white);
+}
+
+article#about-me .btn-contact {
+    background: var(--white);
+    color: var(--blue-dark);
 }
 
 header .switch-theme:hover,
@@ -173,9 +182,7 @@ article#projects .slides button:hover,
 article#services {
     display: grid;
     justify-content: center;
-    place-items: center;
     gap: 1rem;
-    margin: 0 1rem;
 }
 
 article#services section {
@@ -227,7 +234,6 @@ article#abilities figure {
 article#projects {
     display: grid;
     justify-content: center;
-    place-items: center;
     gap: 1.5rem;
 }
 
@@ -292,8 +298,8 @@ article#projects .cards .container-img {
 
 article.education {
     display: grid;
-    place-items: center;
     gap: 1.5rem;
+    justify-content: center;
 }
 
 article.education .content {
@@ -464,6 +470,7 @@ article#contacts button:hover {
     background: var(--blue-dark);
     transform: translateY(100px);
     transition: all .5s;
+    z-index: 10;
 }
 
 .btn-top-page.show {
@@ -537,5 +544,38 @@ footer .copyright {
     /* Make all right containers behave like the left ones */
     .right {
         left: 0%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        width: fit-content;
+        padding: 0.5rem 2rem;
+    }
+
+    main article {
+        width: fit-content;
+    }
+
+    article#about-me {
+        text-align: center;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, 5fr);
+    }
+
+    article#about-me section {
+        width: calc(100vw - 5%);
+    }
+
+    article#services section {
+        grid-template-columns: repeat(1, 50%);
+        justify-content: flex-start;
+    }
+
+    article#services .card {
+        display: grid;
+        justify-content: center;
+        text-align: center;
     }
 }
