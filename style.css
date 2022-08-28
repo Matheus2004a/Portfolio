@@ -7,7 +7,6 @@
 
 /* Palette colors */
 :root {
-    /* Light Mode */
     --blue-dark: #00699e;
     --blue-light: #007ebd;
     --black: #000000;
@@ -15,7 +14,6 @@
     --gray: #d9d9d9;
     --white: #ffffff;
 
-    /* Shadows */
     --shadow-header: 0 4px 10px rgb(0 0 0 / 8%);
     --shadow-cards: 0 2px 10px 2px #d4d4d4;
 }
@@ -37,6 +35,10 @@ header {
     box-shadow: var(--shadow-header);
     padding: .5rem 4rem;
     z-index: 10;
+}
+
+header :is(.menu, .close) {
+    display: none;
 }
 
 header .brand {
@@ -110,6 +112,7 @@ nav ul li a:not(ul li .translate):hover::after {
 
 main {
     display: grid;
+    justify-content: center;
     gap: 3.75rem;
     padding-top: 10%;
 }
@@ -132,8 +135,6 @@ article#about-me .photo {
 }
 
 #google_translate_element select {
-    position: relative;
-    bottom: 10px;
     border: 1px solid var(--light-very-gray);
     border-radius: 3px;
     padding: 6px 8px;
@@ -180,6 +181,7 @@ article#about-me .btn-contact {
     color: var(--blue-dark);
 }
 
+header .close,
 header .switch-theme:hover,
 article#about-me button:hover,
 article#abilities figure:hover,
@@ -325,12 +327,10 @@ article.education .timeline h3 {
     color: var(--blue-dark);
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
     content: '';
     position: absolute;
@@ -342,14 +342,12 @@ article.education .timeline h3 {
     margin-left: -3px;
 }
 
-/* Container around content */
 .container {
     padding: 10px 40px;
     position: relative;
     width: 50%;
 }
 
-/* The circles on the timeline */
 .container::after {
     content: '';
     position: absolute;
@@ -362,17 +360,14 @@ article.education .timeline h3 {
     z-index: 1;
 }
 
-/* Place the container to the left */
 .left {
     right: 38%;
 }
 
-/* Place the container to the right */
 .right {
     left: 50%;
 }
 
-/* Add arrows to the left container (pointing right) */
 .left::before {
     content: " ";
     height: 0;
@@ -386,7 +381,6 @@ article.education .timeline h3 {
     border-color: transparent transparent transparent white;
 }
 
-/* Add arrows to the right container (pointing left) */
 .right::before {
     content: " ";
     height: 0;
@@ -400,12 +394,10 @@ article.education .timeline h3 {
     border-color: transparent white transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 .right::after {
     left: -18px;
 }
 
-/* The actual content */
 .content {
     display: grid;
     gap: 1rem;
@@ -446,12 +438,13 @@ article#contacts :is(input, textarea) {
 
 article#contacts textarea {
     resize: none;
+    height: 30vh;
 }
 
 article#contacts button {
     width: fit-content;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     font-size: 1rem;
@@ -523,22 +516,100 @@ footer .copyright {
     text-align: center;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+    header {
+        width: 100vw;
+        padding: 0.5rem 1.5rem;
+    }
 
-    /* Place the timeline to the left */
+    header .content-brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    header :is(.menu, .close) {
+        display: block;
+    }
+
+    header .close {
+        margin-bottom: 3rem;
+    }
+
+    header nav {
+        width: 70vw;
+        position: fixed;
+        height: 100%;
+        left: -100%;
+        top: 0;
+        padding: 1.5rem 2rem;
+        background: var(--black);
+        transition: all .5s;
+        z-index: 10;
+    }
+
+    header nav.show {
+        left: 0;
+    }
+
+    nav ul {
+        display: grid;
+    }
+
+    main {
+        position: relative;
+    }
+
+    article#about-me {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    article#about-me figure {
+        display: flex;
+        justify-content: center;
+    }
+
+    article#about-me .photo {
+        width: calc(100% - 50%);
+    }
+
+    article#about-me section {
+        width: calc(100vw - 5%);
+        text-align: center;
+    }
+
+    article#services section {
+        grid-template-columns: repeat(1, 50%);
+    }
+
+    article#services .card {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+
+    article#abilities section {
+        width: calc(100% - 60%);
+    }
+
+    .timeline {
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+        right: 5px;
+    }
+
     .timeline::after {
         left: 31px;
     }
 
-    /* Full-width containers */
     .container {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
+        padding: 0;
     }
 
-    /* Make sure that all arrows are pointing leftwards */
     .container::before {
         left: 60px;
         border: medium solid white;
@@ -546,47 +617,50 @@ footer .copyright {
         border-color: transparent white transparent transparent;
     }
 
-    /* Make sure all circles are at the same spot */
     .left::after,
     .right::after {
-        left: 15px;
+        top: 35%;
+        left: 13px;
     }
 
-    /* Make all right containers behave like the left ones */
+    .left {
+        left: 0;
+    }
+
     .right {
-        left: 0%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    header {
-        width: fit-content;
-        padding: 0.5rem 2rem;
+        left: 0;
     }
 
-    main article {
-        width: fit-content;
+    article.education .content {
+        width: calc(100% - 20%);
+        left: 3.5rem;
     }
 
-    article#about-me {
+    article#contacts form h4 {
         text-align: center;
-        display: grid;
+    }
+
+    article#contacts form {
         justify-content: center;
-        grid-template-columns: repeat(1, 5fr);
+        grid-template-columns: repeat(1, 58%);
     }
 
-    article#about-me section {
-        width: calc(100vw - 5%);
+    article#contacts button {
+        width: 100%;
     }
 
-    article#services section {
-        grid-template-columns: repeat(1, 50%);
-        justify-content: flex-start;
+    footer {
+        align-items: center;
     }
 
-    article#services .card {
+    footer article {
         display: grid;
-        justify-content: center;
         text-align: center;
+        place-items: center;
+        gap: 2rem;
+    }
+
+    footer section figure {
+        justify-content: center;
     }
 }

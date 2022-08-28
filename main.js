@@ -5,6 +5,24 @@ const sectionAboutMe = document.querySelector("#about-me")
 const photo = sectionAboutMe.querySelector(".photo")
 const bio = sectionAboutMe.querySelector("section h4")
 const linkedin = document.querySelector(".section-social-medias a")
+const menu = document.querySelector("header nav")
+const iconMenu = document.querySelector("header .menu")
+const iconClose = document.querySelector("header .close")
+const items = menu.querySelectorAll("li")
+
+iconMenu.onclick = () => {
+    menu.classList.add("show")
+}
+
+iconClose.onclick = () => {
+    menu.classList.remove("show")
+}
+
+items.forEach(item => {
+    item.onclick = () => {
+        menu.classList.remove("show")
+    }
+})
 
 async function getData(url) {
     const data = await fetch(url).then(status => status.json()).then(response => response).catch(error => error)
@@ -57,20 +75,16 @@ form.onsubmit = () => {
 }
 
 const swiper = new Swiper('.swiper', {
+    slidesPerView: 2,
     keyboard: true,
+    pagination: {
+        el: '.swiper-pagination',
+    },
     breakpoints: {
-        767: {
-            slidesPerView: 2,
-            setWrapperSize: true // Wrapper cobre todo o conteúdo do slide
-        },
-        700: {
+        800: {
             slidesPerView: 1,
             setWrapperSize: true
         }
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
     },
     navigation: {
         prevEl: '.swiper-button-prev',
