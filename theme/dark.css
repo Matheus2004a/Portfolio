@@ -14,6 +14,15 @@ html.dark header {
     color: var(--white);
 }
 
+html.dark article#about-me section p,
+article#abilities figure {
+    color: var(--grey);
+}
+
+html.dark article#abilities figure:nth-child(9) {
+    color: var(--white) !important;
+}
+
 html.dark ul li a:hover,
 html.dark article#services .card h3 {
     color: var(--blue-marine);

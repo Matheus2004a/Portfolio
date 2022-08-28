@@ -33,7 +33,7 @@ const articleAbilities = document.querySelector("#abilities")
 const section = document.querySelector("#abilities section")
 
 techs.map(item => {
-    section.innerHTML += `<figure>
+    section.innerHTML += `<figure style="color: ${item.color};">
         <span>
             <i class="${item.icon}"></i>
         </span>
