@@ -536,20 +536,34 @@ footer .copyright {
         margin-bottom: 3rem;
     }
 
-    header nav {
-        width: 70vw;
+    header :is(nav, .backdrop) {
         position: fixed;
         height: 100%;
-        left: -100%;
-        top: 0;
-        padding: 1.5rem 2rem;
-        background: var(--black);
         transition: all .5s;
+    }
+
+    header nav {
+        width: 70vw;
+        top: 0;
+        left: -100%;
+        padding: 1.5rem 2rem;
+        background: var(--white);
         z-index: 10;
     }
 
     header nav.show {
         left: 0;
+    }
+
+    header .backdrop {
+        width: 30vw;
+        background: rgba(0, 0, 0, 0.25);
+        top: 0;
+        left: -100%;
+    }
+
+    header .backdrop.show {
+        left: 35%;
     }
 
     nav ul {

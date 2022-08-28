@@ -1,10 +1,12 @@
 import { techs } from "./techs.js";
 import { user, repositories } from "./services/api.js"
 
+const main = document.querySelector("main")
 const sectionAboutMe = document.querySelector("#about-me")
 const photo = sectionAboutMe.querySelector(".photo")
 const bio = sectionAboutMe.querySelector("section h4")
 const linkedin = document.querySelector(".section-social-medias a")
+const backdrop = document.querySelector("header .backdrop")
 const menu = document.querySelector("header nav")
 const iconMenu = document.querySelector("header .menu")
 const iconClose = document.querySelector("header .close")
@@ -12,9 +14,15 @@ const items = menu.querySelectorAll("li")
 
 iconMenu.onclick = () => {
     menu.classList.add("show")
+    backdrop.classList.add("show")
 }
 
 iconClose.onclick = () => {
+    menu.classList.remove("show")
+    backdrop.classList.remove("show")
+}
+
+main.onclick = () => {
     menu.classList.remove("show")
 }
 
