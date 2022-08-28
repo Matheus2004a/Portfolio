@@ -43,6 +43,17 @@ header .brand {
     width: calc(100% - 50%);
 }
 
+header .wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+header .wrapper #google_translate_element select {
+    position: relative;
+    top: 7px;
+}
+
 ul {
     list-style: none;
 }
