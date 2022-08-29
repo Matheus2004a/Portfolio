@@ -1,8 +1,11 @@
+@import url("../style.css");
+
 :root {
     --blue-marine: #4cc7f0;
     --black-opacity: #142129;
     --grey-opacity: #4e5d6b50;
     --black-less: #0c0c0c;
+    --grey: #dadada;
 }
 
 html.dark {
@@ -11,6 +14,18 @@ html.dark {
 
 html.dark header {
     background: var(--black-opacity);
+    color: var(--white);
+}
+
+html.dark header nav {
+    background: var(--black-less);
+    color: var(--white);
+}
+
+html.dark #google_translate_element select {
+    background: var(--black-less);
+    border: 1px solid var(--grey) !important;
+    border: none;
     color: var(--white);
 }
 
@@ -33,7 +48,7 @@ html.dark article#contacts :is(h4, label) {
     color: var(--white);
 }
 
-html.dark :is(article h2, article#about-me, article#services .card, article#abilities figure, article#projects .cards, article.education .content) {
+html.dark :is(article h2, article#about-me, article#services .card, article#projects .cards, article.education .content) {
     color: var(--white);
 }
 

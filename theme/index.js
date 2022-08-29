@@ -1,7 +1,7 @@
 const html = document.querySelector("html")
-const iconTheme = document.querySelector(".switch-theme span i")
+const iconTheme = document.querySelector(".switch-theme i")
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
     getTheme()
 })
 
