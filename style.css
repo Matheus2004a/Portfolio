@@ -99,7 +99,7 @@ nav ul li a::after {
     width: 0;
     content: "";
     position: absolute;
-    bottom: -1.6rem;
+    bottom: -1.5rem;
     left: 0;
     transition: width .5s;
     background: var(--blue-dark);
@@ -114,10 +114,10 @@ main {
     display: grid;
     justify-content: center;
     gap: 3.75rem;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
-main article h2:not(article#about-me h2) {
+main article h2:not(article #about-me h2) {
     text-align: center;
 }
 
@@ -250,8 +250,12 @@ article#projects {
     gap: 1.5rem;
 }
 
+article#projects .slides {
+    max-width: 70rem;
+}
+
 article#projects .swiper {
-    width: 1115px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 article#projects :is(.swiper, .cards) {
@@ -259,7 +263,8 @@ article#projects :is(.swiper, .cards) {
 }
 
 article#projects .cards {
-    width: 550px !important;
+    display: grid;
+    justify-content: center;
     margin-right: 1rem;
     background: var(--white);
     border-radius: 5px;
@@ -606,6 +611,23 @@ footer .copyright {
 
     article#abilities section {
         width: calc(100% - 60%);
+    }
+
+    article#projects .cards figure {
+        display: grid;
+        justify-items: center;
+    }
+
+    article#projects .cards figcaption img {
+        width: calc(100% - 93%);
+    }
+
+    article#projects .cards .container-img {
+        justify-content: center;
+    }
+
+    article#projects .cards figcaption {
+        text-align: center;
     }
 
     .timeline {
