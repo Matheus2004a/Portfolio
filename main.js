@@ -1,7 +1,6 @@
 import { techs } from "./techs.js";
 import { user, repositories } from "./services/api.js"
 
-const main = document.querySelector("main")
 const sectionAboutMe = document.querySelector("#about-me")
 const photo = sectionAboutMe.querySelector(".photo")
 const bio = sectionAboutMe.querySelector("section h4")
@@ -17,18 +16,22 @@ iconMenu.onclick = () => {
     backdrop.classList.add("show")
 }
 
-iconClose.onclick = () => {
+function removeMenu() {
     menu.classList.remove("show")
     backdrop.classList.remove("show")
 }
 
-main.onclick = () => {
-    menu.classList.remove("show")
+iconClose.onclick = () => {
+    removeMenu()
+}
+
+backdrop.onclick = () => {
+    removeMenu()
 }
 
 items.forEach(item => {
     item.onclick = () => {
-        menu.classList.remove("show")
+        removeMenu()
     }
 })
 
@@ -83,14 +86,14 @@ form.onsubmit = () => {
 }
 
 const swiper = new Swiper('.swiper', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     keyboard: true,
     pagination: {
         el: '.swiper-pagination',
     },
     breakpoints: {
-        800: {
-            slidesPerView: 1,
+        767: {
+            slidesPerView: 2,
             setWrapperSize: true
         }
     },

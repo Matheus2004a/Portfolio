@@ -17,7 +17,7 @@ html.dark header {
     color: var(--white);
 }
 
-html.dark header nav {
+html.dark header nav.show {
     background: var(--black-less);
     color: var(--white);
 }
