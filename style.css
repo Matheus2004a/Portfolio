@@ -114,11 +114,13 @@ main {
     display: grid;
     justify-content: center;
     gap: 3.75rem;
-    padding-top: 5%;
+    padding-top: 10%;
 }
 
-main article h2:not(article #about-me h2) {
-    text-align: center;
+main article {
+    display: grid;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 article#about-me {
@@ -192,12 +194,6 @@ article#projects .slides button:hover,
     cursor: pointer;
 }
 
-article#services {
-    display: grid;
-    justify-content: center;
-    gap: 1rem;
-}
-
 article#services section {
     display: grid;
     grid-template-columns: repeat(3, 27%);
@@ -225,10 +221,7 @@ article#services .card h3 {
 }
 
 article#abilities {
-    display: grid;
-    justify-content: center;
     place-items: center;
-    gap: 1.5rem;
 }
 
 article#abilities section {
@@ -242,12 +235,6 @@ article#abilities section {
 article#abilities figure {
     display: grid;
     place-items: center;
-}
-
-article#projects {
-    display: grid;
-    justify-content: center;
-    gap: 1.5rem;
 }
 
 article#projects .slides {
@@ -312,12 +299,6 @@ article#projects .cards .container-img {
     display: flex;
     align-items: center;
     gap: .5rem;
-}
-
-article.education {
-    display: grid;
-    gap: 1.5rem;
-    justify-content: center;
 }
 
 article.education .content {
@@ -413,13 +394,7 @@ article.education .timeline h3 {
     border-radius: 6px;
 }
 
-article#contacts {
-    display: grid;
-    justify-content: center;
-    gap: 1rem;
-}
-
-article#contacts h2 {
+article :is(h2):not(article#about-me h2) {
     text-align: center;
 }
 
