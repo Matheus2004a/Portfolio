@@ -40,14 +40,17 @@ async function getData(url) {
     return data
 }
 
-async function getUser() {
-    const response = await getData(user)
+async function getResponse(repo) {
+    const response = await getData(repo)
     return response
 }
 
+async function getUser() {
+    return getResponse(user)
+}
+
 async function getRepos() {
-    const response = await getData(repositories)
-    return response
+    return getResponse(repositories)
 }
 
 window.onload = async () => {
