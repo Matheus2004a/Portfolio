@@ -248,16 +248,22 @@ article#projects .swiper {
 }
 
 article#projects :is(.swiper, .cards) {
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 12px;
 }
 
 article#projects .cards {
+    position: relative;
     display: grid;
     justify-content: center;
     margin-right: 1rem;
     background: var(--white);
     border-radius: 5px;
     height: auto;
+    transition: opacity .5s;
+}
+
+article#projects .cards:hover {
+    opacity: .8;
 }
 
 article#projects .cards figure {

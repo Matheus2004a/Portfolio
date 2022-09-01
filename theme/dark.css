@@ -43,6 +43,10 @@ html.dark article#services .card h3 {
     color: var(--blue-marine);
 }
 
+html.dark article#projects :is(.swiper, .cards) {
+    box-shadow: none;
+}
+
 html.dark ul li a,
 html.dark article#contacts :is(p, label) {
     color: var(--white);
