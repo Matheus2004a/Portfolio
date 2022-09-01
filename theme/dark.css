@@ -44,7 +44,7 @@ html.dark article#services .card h3 {
 }
 
 html.dark ul li a,
-html.dark article#contacts :is(h4, label) {
+html.dark article#contacts :is(p, label) {
     color: var(--white);
 }
 

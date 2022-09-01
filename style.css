@@ -238,11 +238,13 @@ article#abilities figure {
 }
 
 article#projects .slides {
-    max-width: 70rem;
+    max-width: 65rem;
 }
 
 article#projects .swiper {
     grid-template-columns: repeat(3, 1fr);
+    border-radius: 5px;
+    height: 100%;
 }
 
 article#projects :is(.swiper, .cards) {
@@ -255,6 +257,7 @@ article#projects .cards {
     margin-right: 1rem;
     background: var(--white);
     border-radius: 5px;
+    height: auto;
 }
 
 article#projects .cards figure {
@@ -282,9 +285,14 @@ article#projects .cards img {
 }
 
 article#projects .cards figcaption {
+    position: relative;
     display: grid;
     gap: 1rem;
     padding: 1rem;
+}
+
+article#projects .cards figcaption a {
+    color: var(--blue-dark);
 }
 
 article#projects .swiper-pagination-bullet-active {
@@ -394,7 +402,7 @@ article.education .timeline h3 {
     border-radius: 6px;
 }
 
-article :is(h2):not(article#about-me h2) {
+article :is(h2):not(article#about-me h2, .slides figcaption h2) {
     text-align: center;
 }
 
@@ -406,6 +414,10 @@ article#contacts form {
 article#contacts fieldset {
     display: grid;
     gap: .5rem;
+}
+
+article#contacts p:first-child {
+    color: var(--black);
 }
 
 article#contacts :is(input, textarea) {
@@ -543,7 +555,7 @@ footer .copyright {
     }
 
     header .backdrop.show {
-        left: 35%;
+        left: 37%;
     }
 
     nav ul {
@@ -651,9 +663,14 @@ footer .copyright {
         text-align: center;
     }
 
+    article#contacts p {
+        width: 100vw;
+        text-align: center;
+    }
+
     article#contacts form {
         justify-content: center;
-        grid-template-columns: repeat(1, 58%);
+        grid-template-columns: repeat(1, 85%);
     }
 
     article#contacts button {
