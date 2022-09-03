@@ -22,6 +22,10 @@ html.dark header nav.show {
     color: var(--white);
 }
 
+html.dark nav ul li a.active {
+    color: var(--blue-marine);
+}
+
 html.dark #google_translate_element select {
     background: var(--black-less);
     border: 1px solid var(--grey) !important;
