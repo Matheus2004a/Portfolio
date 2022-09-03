@@ -80,7 +80,10 @@ techs.map(item => {
 articleAbilities.append(section)
 
 const buttonTopPage = document.querySelector(".btn-top-page")
-window.addEventListener("scroll", showButton)
+window.addEventListener("scroll", () => {
+    showButton()
+    checkSection()
+})
 
 function showButton() {
     scrollY > 600 ? buttonTopPage.classList.add("show") : buttonTopPage.classList.remove("show")
@@ -91,6 +94,24 @@ const buttonForm = form.querySelector("button[type='submit']")
 
 form.onsubmit = () => {
     buttonForm.disabled = true
+}
+
+const articles = document.querySelectorAll("article[id]")
+
+function checkSection() {
+    const sectionChecked = window.pageYOffset + (window.innerHeight / 8) * 4
+
+    articles.forEach(article => {
+        const sectionTop = article.offsetTop
+        const sectionHeight = article.offsetHeight
+        const sectionId = article.getAttribute("id")
+
+        const initPoint = sectionChecked >= sectionTop
+        const finalPoint = sectionChecked <= sectionTop + sectionHeight
+
+        const menu = document.querySelector("nav ul li a[href*=" + sectionId + "]")
+        initPoint && finalPoint ? menu.classList.add("active") : menu.classList.remove("active")
+    })
 }
 
 const swiper = new Swiper('.swiper', {
