@@ -22,10 +22,6 @@ html.dark header nav.show {
     color: var(--white);
 }
 
-html.dark nav ul li a.active {
-    color: var(--blue-marine);
-}
-
 html.dark #google_translate_element select {
     background: var(--black-less);
     border: 1px solid var(--grey) !important;
@@ -43,7 +39,9 @@ html.dark article#abilities figure:nth-child(9) {
 }
 
 html.dark ul li a:hover,
-html.dark article#services .card h3 {
+html.dark article#services .card h3,
+html.dark nav ul li a.active,
+html.dark footer section h3 {
     color: var(--blue-marine);
 }
 
