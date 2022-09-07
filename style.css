@@ -294,6 +294,7 @@ article#projects .slides figure button {
 
 article#projects .cards img {
     width: 100%;
+    height: calc(100% - 30%);
     border-radius: 5px 5px 0 0;
 }
 
