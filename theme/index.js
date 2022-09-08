@@ -1,4 +1,4 @@
-const html = document.querySelector("html")
+const body = document.querySelector("body")
 const iconTheme = document.querySelector(".switch-theme i")
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 function changeTheme(theme, icon) {
-    html.classList.add(theme)
+    body.classList.add(theme)
     iconTheme.className = icon
 }
 
@@ -16,11 +16,11 @@ function saveTheme(theme, icon) {
 }
 
 function checkTheme(icon) {
-    let theme = html.className
+    let theme = body.className
     const isLightTheme = theme === "" || theme === "light"
 
-    isLightTheme ? (html.classList.remove("light"), html.classList.add("dark")) : (html.classList.remove("dark"), html.classList.add("light"))
-    theme = html.className
+    isLightTheme ? (body.classList.remove("light"), body.classList.add("dark")) : (body.classList.remove("dark"), body.classList.add("light"))
+    theme = body.className
 
     saveTheme(theme, icon)
 }

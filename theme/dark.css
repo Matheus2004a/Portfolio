@@ -8,80 +8,80 @@
     --grey: #dadada;
 }
 
-html.dark {
+body.dark {
     background: var(--black-less);
 }
 
-html.dark header {
+body.dark header {
     background: var(--black-opacity);
     color: var(--white);
 }
 
-html.dark header nav.show {
+body.dark header nav.show {
     background: var(--black-less);
     color: var(--white);
 }
 
-html.dark #google_translate_element select {
+body.dark #google_translate_element select {
     background: var(--black-less);
     border: 1px solid var(--grey) !important;
     border: none;
     color: var(--white);
 }
 
-html.dark article#about-me section p,
+body.dark article#about-me section p,
 article#abilities figure {
     color: var(--grey);
 }
 
-html.dark article#abilities figure:nth-child(9) {
+body.dark article#abilities figure:nth-child(9) {
     color: var(--white) !important;
 }
 
-html.dark ul li a:hover,
-html.dark article#services .card h3,
-html.dark nav ul li a.active,
-html.dark footer section h3 {
+body.dark ul li a:hover,
+body.dark article#services .card h3,
+body.dark nav ul li a.active,
+body.dark footer section h3 {
     color: var(--blue-marine);
 }
 
-html.dark article#projects :is(.swiper, .cards) {
+body.dark article#projects :is(.swiper, .cards) {
     box-shadow: none;
 }
 
-html.dark ul li a,
-html.dark article#contacts :is(p, label) {
+body.dark ul li a,
+body.dark article#contacts :is(p, label) {
     color: var(--white);
 }
 
-html.dark :is(article h2, article#about-me, article#services .card, article#projects .cards, article.education .content) {
+body.dark :is(article h2, article#about-me, article#services .card, article#projects .cards, article.education .content) {
     color: var(--white);
 }
 
-html.dark nav ul li a::after {
+body.dark nav ul li a::after {
     background: var(--blue-marine);
 }
 
-html.dark article#services .card,
-html.dark article.education .content {
+body.dark article#services .card,
+body.dark article.education .content {
     box-shadow: none;
     background: var(--grey-opacity);
 }
 
-html.dark :is(.left, .right)::before {
+body.dark :is(.left, .right)::before {
     border-color: transparent transparent transparent var(--grey-opacity);
 }
 
-html.dark article#contacts :is(form input, textarea) {
+body.dark article#contacts :is(form input, textarea) {
     background: var(--grey-opacity);
     border: none;
     color: var(--white);
 }
 
-html.dark article#contacts :is(form input, textarea):focus {
+body.dark article#contacts :is(form input, textarea):focus {
     caret-color: var(--blue-marine);
 }
 
-html.dark :is(article#about-me, article#projects .cards, footer) {
+body.dark :is(article#about-me, article#projects .cards, footer) {
     background: var(--grey-opacity);
 }
