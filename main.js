@@ -1,7 +1,7 @@
 import { techs } from "./techs.js"
 import { checkSection } from "./menus.js"
 import { showProjects } from "./projects.js"
-import { user, repositories } from "./services/api.js"
+import { user } from "./services/api.js"
 
 const sectionAboutMe = document.querySelector("#about-me")
 const photo = sectionAboutMe.querySelector(".photo")
@@ -22,10 +22,6 @@ async function getUser() {
     return getResponse(user)
 }
 
-async function getRepos() {
-    return getResponse(repositories)
-}
-
 function showDataUser(user) {
     photo.src = user.avatar_url
     bio.innerHTML = `${user.bio} | ${user.location}`
@@ -33,9 +29,9 @@ function showDataUser(user) {
 }
 
 window.onload = async () => {
-    const [user, repos] = await Promise.all([getUser(), getRepos()])
+    const user = await getUser()
     showDataUser(user)
-    showProjects(repos)
+    showProjects()
 }
 
 const articleAbilities = document.querySelector("#abilities")
