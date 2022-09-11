@@ -557,7 +557,7 @@ footer .copyright {
         left: -100%;
         padding: 1.5rem 2rem;
         background: var(--white);
-        z-index: 10;
+        z-index: 5;
     }
 
     header nav.show {
@@ -565,14 +565,14 @@ footer .copyright {
     }
 
     header .backdrop {
-        width: 30vw;
         background: rgba(0, 0, 0, 0.25);
         top: 0;
         left: -100%;
+        z-index: 5;
     }
 
     header .backdrop.show {
-        left: 37%;
+        right: 0;
     }
 
     nav ul {

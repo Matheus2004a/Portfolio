@@ -54,7 +54,7 @@ export function showProjects() {
                     alt="pricing-toggle">
                 </a>
                 <figcaption>
-                    <h2>${project.repo.replaceAll("-", " ")}</h2>
+                    <h2>${project.repo}</h2>
                     <p>${project.description}</p>
             
                     <button>
