@@ -14,19 +14,9 @@ function removeMenu() {
     backdrop.classList.remove("show")
 }
 
-iconClose.onclick = () => {
-    removeMenu()
-}
-
-backdrop.onclick = () => {
-    removeMenu()
-}
-
-items.forEach(item => {
-    item.onclick = () => {
-        removeMenu()
-    }
-})
+iconClose.onclick = () => removeMenu()
+backdrop.onclick = () => removeMenu()
+items.forEach(item => item.onclick = () => removeMenu())
 
 const articles = document.querySelectorAll("article[id]")
 

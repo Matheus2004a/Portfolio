@@ -50,8 +50,7 @@ export function showProjects() {
         section.innerHTML += `<div class="swiper-slide cards">
             <figure>
                 <a href="${project.website}" target="_blank">
-                    <img src="${project.image}"
-                    alt="pricing-toggle">
+                    <img src="${project.image}" alt="pricing-toggle">
                 </a>
                 <figcaption>
                     <h2>${project.repo}</h2>
