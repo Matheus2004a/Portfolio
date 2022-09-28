@@ -193,7 +193,7 @@ article#about-me .btn-contact {
     color: var(--blue-dark);
 }
 
-header .close,
+header :is(.menu, .close),
 header .switch-theme:hover,
 article#about-me button:hover,
 article#abilities figure:hover,
@@ -620,6 +620,10 @@ footer .copyright {
     article#projects .cards figure {
         display: grid;
         justify-items: center;
+    }
+
+    article#projects .cards figure a {
+        height: fit-content;
     }
 
     article#projects .cards figcaption img {

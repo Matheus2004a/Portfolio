@@ -82,6 +82,10 @@ body.dark article#contacts :is(form input, textarea):focus {
     caret-color: var(--blue-marine);
 }
 
-body.dark :is(article#about-me, article#projects .cards, footer) {
+body.dark article#projects .cards {
+    background: none;
+}
+
+body.dark :is(article#about-me, article#projects .cards figure, footer) {
     background: var(--grey-opacity);
 }
