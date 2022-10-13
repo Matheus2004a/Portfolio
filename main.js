@@ -5,8 +5,8 @@ import { showProjects } from "./projects.js"
 
 const sectionAboutMe = document.querySelector("#about-me")
 const photo = sectionAboutMe.querySelector(".photo")
-const bio = sectionAboutMe.querySelector("section h4")
 const linkedin = document.querySelector(".section-social-medias a")
+const elSectionAboutMe = sectionAboutMe.querySelector("section")
 
 async function getData(url) {
     const response = await fetch(url)
@@ -28,8 +28,10 @@ async function getRepos() {
 }
 
 function showDataUser(user) {
+    const bio = document.createElement("h4")
     photo.src = user.avatar_url
     bio.innerHTML = `${user.bio} | ${user.location}`
+    elSectionAboutMe.insertBefore(bio, elSectionAboutMe.querySelector("p"))
     linkedin.href = user.blog
 }
 
