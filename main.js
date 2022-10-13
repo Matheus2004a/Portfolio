@@ -1,4 +1,4 @@
-import { user } from "./services/api.js"
+import { user, repositories } from "./services/api.js"
 import { checkSection } from "./menus.js"
 import { techs } from "./techs.js"
 import { showProjects } from "./projects.js"
@@ -23,6 +23,10 @@ async function getUser() {
     return getResponse(user)
 }
 
+async function getRepos() {
+    return getResponse(repositories)
+}
+
 function showDataUser(user) {
     photo.src = user.avatar_url
     bio.innerHTML = `${user.bio} | ${user.location}`
@@ -30,9 +34,9 @@ function showDataUser(user) {
 }
 
 window.onload = async () => {
-    const user = await getUser()
+    const [user, repos] = await Promise.all([getUser(), getRepos()])
     showDataUser(user)
-    showProjects()
+    showProjects(repos)
 }
 
 const articleAbilities = document.querySelector("#abilities")
