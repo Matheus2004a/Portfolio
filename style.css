@@ -252,7 +252,6 @@ article#projects .slides {
 }
 
 article#projects .swiper {
-    grid-template-columns: repeat(3, 1fr);
     border-radius: 5px;
     height: 100%;
 }
@@ -281,6 +280,7 @@ article#projects .cards:hover {
 
 article#projects .cards figure {
     transition: background .5s;
+    border-radius: 5px;
 }
 
 article#projects .slides button {
@@ -618,11 +618,6 @@ footer .copyright {
 
     article#abilities section {
         width: calc(100% - 60%);
-    }
-
-    article#projects .cards figure {
-        display: grid;
-        justify-items: center;
     }
 
     article#projects .cards figure a {
