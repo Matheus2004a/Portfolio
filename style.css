@@ -257,6 +257,10 @@ article#projects .swiper {
     height: 100%;
 }
 
+article#projects .swiper-wrapper {
+    gap: 1rem;
+}
+
 article#projects :is(.swiper, .cards) {
     box-shadow: 0px 0px 12px var(--gray);
 }
@@ -265,7 +269,6 @@ article#projects .cards {
     position: relative;
     display: grid;
     justify-content: center;
-    margin-right: 1rem;
     background: var(--white);
     border-radius: 5px;
     height: auto;
@@ -297,7 +300,7 @@ article#projects .slides figure button {
 
 article#projects .cards img {
     width: 100%;
-    height: calc(100% - 30%);
+    height: 20rem;
     border-radius: 5px 5px 0 0;
 }
 

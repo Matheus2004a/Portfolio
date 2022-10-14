@@ -1,15 +1,15 @@
+import { projects } from "./images.js";
+
 function capitalizeFirst(str) {
     const subst = str.replace(/(-|_)/g, " ")
     const stringCapitalized = subst.toLowerCase().replace(/(?:^|\s)\S/g, a => a.toUpperCase())
     return stringCapitalized
 }
 
-export function showProjects(projects) {
+export function showProjects() {
     const section = document.querySelector("#projects .swiper-wrapper")
-    const projectHasSite = project => project.homepage !== null && project.homepage !== ""
-    const projectsFiltered = projects.filter(projectHasSite)
-
-    projectsFiltered.map(project => {
+    
+    projects.map(project => {
         section.innerHTML += `<div class="swiper-slide cards">
             <figure>
                 <a href="${project.homepage}" target="_blank">
