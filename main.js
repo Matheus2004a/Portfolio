@@ -69,6 +69,8 @@ const buttonForm = form.querySelector("button[type='submit']")
 
 form.onsubmit = () => buttonForm.disabled = true
 
+$('#phone').mask('(00) 00000-0000');    
+
 const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     keyboard: true,

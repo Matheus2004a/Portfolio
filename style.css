@@ -40,6 +40,10 @@ header {
     z-index: 10;
 }
 
+address {
+    font-style: normal;
+}
+
 header :is(.menu, .close) {
     display: none;
 }
@@ -521,7 +525,11 @@ footer section figure {
 
 footer .section-social-medias span {
     font-size: 1.5rem;
-    margin-right: 1rem;
+}
+
+footer .wrapper-social {
+    display: flex;
+    gap: 1rem;
 }
 
 footer .copyright {

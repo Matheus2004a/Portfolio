@@ -1,9 +1,7 @@
 const body = document.querySelector("body")
 const iconTheme = document.querySelector(".switch-theme i")
 
-window.addEventListener("DOMContentLoaded", () => {
-    getTheme()
-})
+window.addEventListener("DOMContentLoaded", getTheme)
 
 function changeTheme(theme, icon) {
     body.classList.add(theme)
