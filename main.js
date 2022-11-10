@@ -2,6 +2,7 @@ import { user, repositories } from "./services/api.js"
 import { checkSection } from "./menus.js"
 import { techs } from "./techs.js"
 import { showProjects } from "./projects.js"
+import { calcAge } from "./age.js"
 
 const sectionAboutMe = document.querySelector("#about-me")
 const photo = sectionAboutMe.querySelector(".photo")
@@ -69,7 +70,7 @@ const buttonForm = form.querySelector("button[type='submit']")
 
 form.onsubmit = () => buttonForm.disabled = true
 
-$('#phone').mask('(00) 00000-0000');    
+$('#phone').mask('(00) 00000-0000')
 
 const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
