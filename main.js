@@ -8,6 +8,7 @@ const sectionAboutMe = document.querySelector("#about-me")
 const photo = sectionAboutMe.querySelector(".photo")
 const linkedin = document.querySelector(".section-social-medias a")
 const elSectionAboutMe = sectionAboutMe.querySelector("section")
+const paragraph = elSectionAboutMe.querySelector("p")
 
 async function getData(url) {
     const response = await fetch(url)
@@ -32,14 +33,24 @@ function showDataUser(user) {
     const bio = document.createElement("h4")
     photo.src = user.avatar_url
     bio.innerHTML = `${user.bio} | ${user.location}`
-    elSectionAboutMe.insertBefore(bio, elSectionAboutMe.querySelector("p"))
+    elSectionAboutMe.insertBefore(bio, paragraph)
     linkedin.href = user.blog
+}
+
+function showMyAge() {
+    const age = calcAge()
+
+    const contentAge = document.createElement("p")
+    contentAge.innerHTML = `Meu nome é Matheus Aurélio, tenho ${age} anos, sou Desenvolvedor Front-End e Técnico em Desenvolvimento de Sistemas, tendo como objetivo atuar no desenvolvimento de interfaces com foco em experiência para o usuário.`
+    
+    elSectionAboutMe.querySelector("h4").after(contentAge)
 }
 
 window.onload = async () => {
     const [user, repos] = await Promise.all([getUser(), getRepos()])
     showDataUser(user)
     showProjects(repos)
+    showMyAge()
 }
 
 const articleAbilities = document.querySelector("#abilities")

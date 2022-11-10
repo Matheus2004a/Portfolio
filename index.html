@@ -59,10 +59,6 @@
 
             <section>
                 <h2>Sobre mim</h2>
-                <p>Meu nome é Matheus Aurélio, tenho 17 anos, sou Desenvolvedor Front-End e Técnico em Desenvolvimento
-                    de Sistemas, tendo como objetivo atuar no desenvolvimento de interfaces com foco em experiência para
-                    o usuário.
-                </p>
                 <p>
                     Atualmente estou estudando JavaScript e suas stacks, pois meu objetivo é me especializar nesta
                     linguagem para aplicar em uma oportunidade de trabalho para evoluir meus conhecimentos e fazer
@@ -182,7 +178,9 @@
 
                 <fieldset>
                     <label for="phone">Telefone</label>
-                    <input type="tel" name="telephone" id="phone" placeholder="Ex: (49) 99817 - 9010">
+                    <input type="tel" name="telephone" id="phone" placeholder="Ex: (49) 99817 - 9010"
+                        pattern="/^(?:(?:\+|00)?(?:(?:\([1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/" title="Formato de número de telefone incorreto"
+                        required>
                 </fieldset>
 
                 <fieldset>
