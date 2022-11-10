@@ -34,7 +34,7 @@ article#abilities figure {
     color: var(--grey);
 }
 
-body.dark article#abilities figure:nth-child(9) {
+body.dark article#abilities figure:nth-child(10) {
     color: var(--white) !important;
 }
 

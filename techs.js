@@ -20,6 +20,11 @@ export const techs = [
         color: "#62DAFC"
     },
     {
+        icon: "fa-brands fa-node-js",
+        name: "NodeJS",
+        color: "#6EBF49"
+    },
+    {
         icon: "fa-brands fa-bootstrap",
         name: "Bootstrap",
         color: "#553C7C"
